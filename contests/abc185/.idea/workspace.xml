@@ -16,7 +16,13 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="847d1409-6513-4d82-9fed-a69775a862a1" name="Default Changelist" comment="" />
@@ -26,7 +32,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/../.." value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectId" id="1lrpkhdm62hdzMtLXoXBrQmvw3C" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -37,8 +48,9 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
-  <component name="RunManager" selected="Python tests.test_d">
+  <component name="RunManager" selected="Python tests.test_e">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -81,21 +93,47 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test_d" type="tests" factoryName="Unittests">
+    <configuration name="main_e" type="PythonConfigurationType" factoryName="Python">
+      <module name="abc185" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/e" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/e/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_e" type="tests" factoryName="Unittests">
       <module name="abc185" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/d" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_pattern" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/d/test.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/e/test.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.main_e" />
+      <item itemvalue="Python tests.test_e" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -120,7 +158,28 @@
       <option name="project" value="LOCAL" />
       <updated>1608367407155</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="フォルダ名変更">
+      <created>1608369165342</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1608369165342</updated>
+    </task>
+    <task id="LOCAL-00004" summary="フォルダ名変更">
+      <created>1608369291905</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1608369291905</updated>
+    </task>
+    <task id="LOCAL-00005" summary="E（途中）">
+      <created>1608378261133</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1608378261133</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -128,40 +187,78 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
     <MESSAGE value="abc185" />
-    <option name="LAST_COMMIT_MESSAGE" value="abc185" />
+    <MESSAGE value="フォルダ名変更" />
+    <MESSAGE value="E（途中）" />
+    <option name="LAST_COMMIT_MESSAGE" value="E（途中）" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1345" height="179" key="GridCell.Tab.0.bottom" timestamp="1608366933580">
+    <state x="-1506" y="-129" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608373613971">
       <screen x="-1920" y="-303" width="1920" height="1040" />
     </state>
-    <state width="1345" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728/-1920.-303.1920.1040@-1920.-303.1920.1040" timestamp="1608366933580" />
+    <state x="-1506" y="-129" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/-1920.-303.1920.1040@-1920.-303.1920.1040" timestamp="1608373613971" />
+    <state x="-1180" y="-29" key="FileChooserDialogImpl" timestamp="1608369734433">
+      <screen x="-1920" y="-303" width="1920" height="1040" />
+    </state>
+    <state x="-1180" y="-29" key="FileChooserDialogImpl/0.0.1366.728/-1920.-303.1920.1040@-1920.-303.1920.1040" timestamp="1608369734433" />
+    <state width="949" height="429" key="GridCell.Tab.0.bottom" timestamp="1608373633602">
+      <screen x="-1920" y="-303" width="1920" height="1040" />
+    </state>
+    <state width="949" height="429" key="GridCell.Tab.0.bottom/0.0.1366.728/-1920.-303.1920.1040@-1920.-303.1920.1040" timestamp="1608373633602" />
     <state width="1345" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728/-1920.-303.1920.1040@0.0.1366.728" timestamp="1608365441953" />
-    <state width="1345" height="179" key="GridCell.Tab.0.center" timestamp="1608366933579">
+    <state width="949" height="429" key="GridCell.Tab.0.center" timestamp="1608373633602">
       <screen x="-1920" y="-303" width="1920" height="1040" />
     </state>
-    <state width="1345" height="179" key="GridCell.Tab.0.center/0.0.1366.728/-1920.-303.1920.1040@-1920.-303.1920.1040" timestamp="1608366933579" />
+    <state width="949" height="429" key="GridCell.Tab.0.center/0.0.1366.728/-1920.-303.1920.1040@-1920.-303.1920.1040" timestamp="1608373633602" />
     <state width="1345" height="179" key="GridCell.Tab.0.center/0.0.1366.728/-1920.-303.1920.1040@0.0.1366.728" timestamp="1608365441952" />
-    <state width="1345" height="179" key="GridCell.Tab.0.left" timestamp="1608366933579">
+    <state width="949" height="429" key="GridCell.Tab.0.left" timestamp="1608373633602">
       <screen x="-1920" y="-303" width="1920" height="1040" />
     </state>
-    <state width="1345" height="179" key="GridCell.Tab.0.left/0.0.1366.728/-1920.-303.1920.1040@-1920.-303.1920.1040" timestamp="1608366933579" />
+    <state width="949" height="429" key="GridCell.Tab.0.left/0.0.1366.728/-1920.-303.1920.1040@-1920.-303.1920.1040" timestamp="1608373633602" />
     <state width="1345" height="179" key="GridCell.Tab.0.left/0.0.1366.728/-1920.-303.1920.1040@0.0.1366.728" timestamp="1608365441952" />
-    <state width="1345" height="179" key="GridCell.Tab.0.right" timestamp="1608366933579">
+    <state width="949" height="429" key="GridCell.Tab.0.right" timestamp="1608373633602">
       <screen x="-1920" y="-303" width="1920" height="1040" />
     </state>
-    <state width="1345" height="179" key="GridCell.Tab.0.right/0.0.1366.728/-1920.-303.1920.1040@-1920.-303.1920.1040" timestamp="1608366933579" />
+    <state width="949" height="429" key="GridCell.Tab.0.right/0.0.1366.728/-1920.-303.1920.1040@-1920.-303.1920.1040" timestamp="1608373633602" />
     <state width="1345" height="179" key="GridCell.Tab.0.right/0.0.1366.728/-1920.-303.1920.1040@0.0.1366.728" timestamp="1608365441952" />
+    <state x="-1452" y="-139" key="SettingsEditor" timestamp="1608378242128">
+      <screen x="-1920" y="-303" width="1920" height="1040" />
+    </state>
+    <state x="-1452" y="-139" key="SettingsEditor/0.0.1366.728/-1920.-303.1920.1040@-1920.-303.1920.1040" timestamp="1608378242128" />
     <state x="-1368" y="-51" key="Vcs.Push.Dialog.v2" timestamp="1608367409532">
       <screen x="-1920" y="-303" width="1920" height="1040" />
     </state>
     <state x="-1368" y="-51" key="Vcs.Push.Dialog.v2/0.0.1366.728/-1920.-303.1920.1040@-1920.-303.1920.1040" timestamp="1608367409532" />
+    <state x="-1143" y="130" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608370838641">
+      <screen x="-1920" y="-303" width="1920" height="1040" />
+    </state>
+    <state x="-1143" y="130" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728/-1920.-303.1920.1040@-1920.-303.1920.1040" timestamp="1608370838641" />
+    <state x="-1179" y="-71" key="git4idea.branch.GitSmartOperationDialog" timestamp="1608369101426">
+      <screen x="-1920" y="-303" width="1920" height="1040" />
+    </state>
+    <state x="-1179" y="-71" key="git4idea.branch.GitSmartOperationDialog/0.0.1366.728/-1920.-303.1920.1040@-1920.-303.1920.1040" timestamp="1608369101426" />
   </component>
 </project>
