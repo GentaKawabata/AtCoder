@@ -25,7 +25,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="847d1409-6513-4d82-9fed-a69775a862a1" name="Default Changelist" comment="" />
+    <list default="true" id="847d1409-6513-4d82-9fed-a69775a862a1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../atcoder-cli_download.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../atcoder-cli_download.bat" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,7 +49,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../abc186" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunManager" selected="Python tests.test_e">
@@ -220,10 +222,10 @@
       <screen x="-1920" y="-303" width="1920" height="1040" />
     </state>
     <state x="-1506" y="-129" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/-1920.-303.1920.1040@-1920.-303.1920.1040" timestamp="1608373613971" />
-    <state x="-1180" y="-29" key="FileChooserDialogImpl" timestamp="1608369734433">
+    <state x="-1180" y="-29" key="FileChooserDialogImpl" timestamp="1608378430330">
       <screen x="-1920" y="-303" width="1920" height="1040" />
     </state>
-    <state x="-1180" y="-29" key="FileChooserDialogImpl/0.0.1366.728/-1920.-303.1920.1040@-1920.-303.1920.1040" timestamp="1608369734433" />
+    <state x="-1180" y="-29" key="FileChooserDialogImpl/0.0.1366.728/-1920.-303.1920.1040@-1920.-303.1920.1040" timestamp="1608378430330" />
     <state width="949" height="429" key="GridCell.Tab.0.bottom" timestamp="1608373633602">
       <screen x="-1920" y="-303" width="1920" height="1040" />
     </state>
