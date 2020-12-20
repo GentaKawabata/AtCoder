@@ -2,7 +2,19 @@
 from copy import copy
 
 
+def get_ruiseki_wa(in_list):
+    if len(in_list) == 0:
+        return [0]
+    else:
+        tail = in_list.pop(-1)
+        ruiseki_list = get_ruiseki_wa(in_list)
+
+        tail_of_pre = ruiseki_list[-1]
+        return ruiseki_list + [tail_of_pre + tail]
+
+
 def get_answer_ij(l_a):
+
     if len(l_a) == 2:
         return abs(l_a[0] - l_a[1])
     else:
@@ -15,23 +27,10 @@ def get_answer_ij(l_a):
 
 
 def get_answer(n, l_a):
+    l_a.sort()
+
     return get_answer_ij(l_a)
 
-# def get_answer_ij(l_a, j):
-#     if j == 1:
-#         return abs(l_a[0] - l_a[1])
-#     else:
-#         total = 0
-#         for k in range(0, j):
-#             total += abs(l_a[k] - l_a[j])
-#
-#         _ = l_a.pop(-1)
-#         return get_answer_ij(l_a, j - 1) + total
-#
-#
-# def get_answer(n, l_a):
-#     return get_answer_ij(l_a, n - 1)
-#
 
 if __name__ == "__main__":
     # S = input()
