@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+def get_answer(num):
+    return "hoge"
 
 
 
