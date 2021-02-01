@@ -10,11 +10,6 @@ if __name__ == "__main__":
 
     current_dir = os.path.abspath("./")
 
-    # tests ディレクトリの作成
-    tests_dir_path: str = os.path.abspath(TESTS_DIR)
-    if not os.path.exists(tests_dir_path):
-        os.makedirs(tests_dir_path)
-
     # オプションからコンテストID を取得
     parser: argparse.ArgumentParser = argparse.ArgumentParser()
     parser.add_argument("-c", "--contest", help="Contest ID", required=True, type=str)
@@ -22,8 +17,18 @@ if __name__ == "__main__":
     contest_id = args.contest
 
     # コンテストIDディレクトリの中にある各問題の名前を取得
-    files_dirs = os.listdir(os.path.join(current_dir, contest_id))
-    list_question_dir = [dir for dir in files_dirs if os.path.isdir(os.path.join(current_dir, contest_id, dir))]
+    contest_dir = os.path.join(current_dir, contest_id)
+    if not os.path.exists(contest_dir):
+        print(f"directory {contest_id} doesn't exist...")
+        exit(1)
+
+    paths_in_contest_dir = os.listdir(contest_dir)
+    list_question_dir = [dir for dir in paths_in_contest_dir if os.path.isdir(os.path.join(current_dir, contest_id, dir))]
+
+    # tests ディレクトリの作成
+    tests_dir_path: str = os.path.abspath(TESTS_DIR)
+    if not os.path.exists(tests_dir_path):
+        os.makedirs(tests_dir_path)
 
     # テストコードのテンプレートを取得
     for question_name in list_question_dir:
