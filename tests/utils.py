@@ -17,11 +17,13 @@ class MyTimer(object):
             self._start = dt.datetime.now()
             self._lap_time = self._start
 
-    def stop(self) -> None:
+    def stop(self) -> Optional[dt.timedelta]:
         if self._is_running:
             self._total = dt.datetime.now() - self._start
             self._start = None
             self._is_running = False
+            return self._total
+        return None
 
     def lap_time(self) -> Optional[dt.timedelta]:
         if self._is_running:
