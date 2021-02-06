@@ -1,6 +1,6 @@
 @echo off
 
-set contest_id=abc190
+set contest_id=abc191
 
 rem call を使うと、処理が終わってから次の処理にいく
 call acc new %contest_id%
