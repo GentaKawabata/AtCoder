@@ -37,7 +37,7 @@ class Test_abc191_c(TestCase):
             "....."
         ]
 
-        self.assertEqual(3, get_answer(H, W, S))
+        self.assertEqual(8, get_answer(H, W, S))
 
     def test_get_answer_3(self):
         H = 5
@@ -50,11 +50,11 @@ class Test_abc191_c(TestCase):
             "......."
         ]
 
-        self.assertEqual(6, get_answer(H, W, S))
+        self.assertEqual(8, get_answer(H, W, S))
 
     def test_get_answer_4(self):
-        H = 7
-        W = 5
+        H = 9
+        W = 13
         S = [
             ".............",
             "...######....",
@@ -67,7 +67,7 @@ class Test_abc191_c(TestCase):
             "............."
         ]
 
-        self.assertEqual(6, get_answer(H, W, S))
+        self.assertEqual(26, get_answer(H, W, S))
 
     def test_get_answer_5(self):
         H = 3
@@ -97,4 +97,4 @@ class Test_abc191_c(TestCase):
             ".........."
         ]
 
-        self.assertEqual(5, get_answer(H, W, S))
+        self.assertEqual(18, get_answer(H, W, S))

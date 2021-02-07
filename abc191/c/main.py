@@ -2,127 +2,59 @@
 
 from typing import List
 
-def count_around_white_seq(i, j, S):
-    # 連続するwhiteの最大数
+"""
+【解けなかった要因1 勘違い】
+デジタル的な見方をしていた。
+例えば
 
-    n = 2   # 2周しよう
+.....
+.#...
+.##..
+.###.
+.....
 
-    max_count = 0
+これは、三角形とみなしていたが、"#"1つで四角形とみなすため、
+この例の場合、階段のような多角形になり、答えは八角形となる。
+
+【解けなかった要因2 ひらめきがなかった】
+「周囲にいくつ黒（または白）があるか判定すれば解ける」と気づいたまではよかったが、
+ま、勘違いがあったせいもあるけど、マスばっかりに注目していた。
+今回の解説ではマスを区切った格子点を座標とみなしていた。
+発想が乏しかった。次に繋げる。
+"""
+
+
+def count_around_black(x, y, S):
     count = 0
 
-    for _ in range(2):
+    if S[x-1][y-1] == "#":
+        count += 1
+    if S[x][y-1] == "#":
+        count += 1
+    if S[x][y] == "#":
+        count += 1
+    if S[x-1][y] == "#":
+        count += 1
 
-        if S[i-1][j-1] == ".":
-            count += 1
-            if max_count < count:
-                max_count = count
-        else:
-            if max_count < count:
-                max_count = count
-            count = 0
-
-        if S[i-1][j] == ".":
-            count += 1
-            if max_count < count:
-                max_count = count
-        else:
-            if max_count < count:
-                max_count = count
-            count = 0
-
-        if S[i-1][j+1] == ".":
-            count += 1
-            if max_count < count:
-                max_count = count
-        else:
-            if max_count < count:
-                max_count = count
-            count = 0
-
-        if S[i][j+1] == ".":
-            count += 1
-            if max_count < count:
-                max_count = count
-        else:
-            if max_count < count:
-                max_count = count
-            count = 0
-
-        if S[i+1][j+1] == ".":
-            count += 1
-            if max_count < count:
-                max_count = count
-        else:
-            if max_count < count:
-                max_count = count
-            count = 0
-
-        if S[i+1][j] == ".":
-            count += 1
-            if max_count < count:
-                max_count = count
-        else:
-            if max_count < count:
-                max_count = count
-            count = 0
-
-
-        if S[i+1][j-1] == ".":
-            count += 1
-            if max_count < count:
-                max_count = count
-        else:
-            if max_count < count:
-                max_count = count
-            count = 0
-
-        if S[i][j-1] == ".":
-            count += 1
-            if max_count < count:
-                max_count = count
-        else:
-            if max_count < count:
-                max_count = count
-            count = 0
-
-    if max_count >= 8:
-        max_count = 8
-
-    return max_count
-
-
-# def count_black(line_s):
-
-#     ans = 0
-#     for sij in line_s:
-#         if sij == "#":
-#             ans += 1
-    
-#     return ans
+    return count
 
 
 def get_answer(H, W, S: List[str]):
-    # 周りの白の数が4つ以上で角と判定
 
     ans = 0
+    for x in range(1, H):
+        for y in range(1, W):
+            # print(f"{x}, {y}")
+            n_around_black = count_around_black(x, y, S)
+            # print(n_around_black)
 
-    for i, si in enumerate(S):
-
-        if i == 0 or i == H - 1:
-            continue
-        for j, sij in enumerate(si):
-            if j == 0 or j == W - 1 or sij == ".":
-                continue
-
-            n_around_white = count_around_white_seq(i, j, S)
-            if n_around_white in [2, 4, 5, 6, 7, 8]:
+            if n_around_black in [1, 3]:
                 ans += 1
 
     if ans == 1 or ans == 2:
         ans = 4
 
     return ans
-
 
 
 if __name__ == "__main__":
