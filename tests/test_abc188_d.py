@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 
 from unittest import TestCase
-import random as rd
 
 # import tests.utils as utils
 # import utils
-from {contest_id}.{question}.main import *
+from abc188.d.main import *
 
-class Test_{contest_id}_{question}(TestCase):
+class Test_abc188_d(TestCase):
 
     def test_get_answer_1(self):
         self.fail()
