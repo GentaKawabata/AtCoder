@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 
-from typing import List
+from typing import List, NewType, Tuple
 
 
 class Player(object):
@@ -11,15 +11,12 @@ class Player(object):
         self.rate = rate
 
 
-def match(p1: Player, p2: Player):
-    if p1.rate > p2.rate:
-        winner = p1
-        loser = p2
-    else:
-        winner = p2
-        loser = p1
-    
-    return winner, loser
+Winner = NewType("Winner", Player)
+Loser = NewType("Loser", Player)
+
+
+def match(p1: Player, p2: Player) -> Tuple[Winner, Loser]:
+    return (p1, p2) if p1.rate > p2.rate else (p2, p1)
 
 
 def _get_answer(l_player: List[Player]):
