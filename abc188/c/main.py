@@ -35,12 +35,20 @@ def _get_answer(l_player: List[Player]):
     return _get_answer(next_l_player)
 
 
-def get_answer(n, l_a):
-    list_player = []
-    for i, A in enumerate(l_a):
-        list_player.append(Player(i + 1, A))
-    
-    return _get_answer(list_player)
+def get_answer(n: int, l_a: List[int]):
+    center_index = 1 << (n-1)
+
+    winnere_rate = max(l_a)
+    winner_idx = l_a.index(winnere_rate)
+
+    if winner_idx >= center_index:
+        semi_winners_block = l_a[:center_index]
+    else:
+        semi_winners_block = l_a[center_index:]
+
+    semi_winner_rate = max(semi_winners_block)
+    semi_winner_idx = l_a.index(semi_winner_rate)
+    return semi_winner_idx + 1
 
 
 if __name__ == "__main__":

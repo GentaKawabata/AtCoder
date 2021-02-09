@@ -16,6 +16,13 @@ class Test_abc188_c(TestCase):
 
         self.assertEqual(2, ans)
 
+    def test_get_answer_2(self):
+        N = 4
+        L_A = [6, 13, 12, 5, 3, 7, 10, 11, 16, 9, 8, 15, 2, 1, 14, 4]
+        ans = get_answer(N, L_A)
+
+        self.assertEqual(2, ans)
+
     def test_get_answer_term1(self):
         N = 1
         L_A = [rd.randrange(1, pow(10, 9)) for _ in range(pow(2, N))]
