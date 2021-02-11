@@ -3,40 +3,32 @@
 from typing import List
 
 
-# def get_answer(n: int, l_s: List[str]):
+def get_answer_list(N: int, S: List[str]) -> str:
+    # リストのまま実行すると TLE が頻発
+    for i, s in enumerate(S):
+        if not "!" in s:
+            tmp = "!" + s
+            if tmp in S:
+                return s
+    return "satisfiable"
 
-#     for s in l_s:
-#         if not "!" in s:
-#             tmp = "!" + s
-#             if tmp in l_s:
-#                 return s
-#     return "satisfiable"
+
+def get_answer_set(N: int, S: set) -> str:
+    # set を使うと速度向上
+    for i, s in enumerate(S):
+        if "!" + s in S:
+            return s
+    return "satisfiable"
+
+
+def get_answer(N: int, S: List[str]) -> str:
+    # return get_answer_list(N, S)
+    S = set(S)
+    return get_answer_set(N, S)
 
 
 if __name__ == "__main__":
-    # S = input()
-    # N = int(input())
-    # S = input().split()
-    # A, B, C = input().split()
-    # L = list(map(int, input().split()))
-    # H, N = map(int, input().split())
+    _N = int(input())
+    _S = [input() for _ in range(_N)]
 
-    N = int(input())
-    L_S = []
-    for _ in range(N):
-        s = input()
-
-        if "!" in s:
-            replaced = s.replace("!", "")
-            if replaced in L_S:
-                print(replaced)
-                quit()
-        else:
-            if "!" + s in L_S:
-                print(s)
-                quit()
-
-        if not s in L_S:
-            L_S.append(s)
-
-    print("satisfiable")
+    print(get_answer(_N, _S))

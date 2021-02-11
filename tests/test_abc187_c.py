@@ -23,7 +23,7 @@ class Test_abc187_c(TestCase):
             "brown",
             "!gray"
         ]
-        self.assertEqual("satisfiable", get_answer(N, L_S))
+        self.assertEqual("satisfiable", get_answer_list(N, L_S))
 
     def test_get_answer_2(self):
         N = 11
@@ -40,13 +40,24 @@ class Test_abc187_c(TestCase):
             "!gray",
             "!red"
         ]
-        self.assertEqual("red", get_answer(N, L_S))
+        self.assertEqual("red", get_answer_list(N, L_S))
 
-    def test_get_answer_term(self):
+    def test_get_answer_term_list(self):
 
         N = 2 * pow(10, 5)
-        L_S = []
+        S = []
         for _ in range(N):
-            L_S.append("!aaaaaaaaa")
+            S.append("aaaaaaaaa")
+        
+        self.assertEqual("satisfiable", get_answer_list(N, S))
 
-        self.assertEqual("satisfiable", get_answer(N, L_S))
+    def test_get_answer_term_set(self):
+
+        N = 2 * pow(10, 5)
+        S = []
+        for _ in range(N):
+            S.append("aaaaaaaaa")
+        
+        S = set(S)
+
+        self.assertEqual("satisfiable", get_answer_set(N, S))
