@@ -1,31 +1,39 @@
 # -*- coding: utf-8 -*-
 
-from typing import List
-import itertools
-
-
 def get_answer(str_n: str) -> int:
 
-    k = len(str_n)
-    l_index = [i for i in range(k)]
     l_str_n = list(str_n)
+    cnt = [0 for _ in range(3)]
+    for s in l_str_n:
+        cnt[int(s) % 3] += 1
 
-    num_pickup = k
-    while num_pickup > 0:
-        list_kumiawase = itertools.combinations(l_index, num_pickup)
+    cur = (cnt[1] + 2 * cnt[2]) % 3 # 全ての桁の和を3で割ったあまり
+    k = sum(cnt)
 
-        for kumiawase in list_kumiawase:
-            kumiawase = list(kumiawase)
-            l_str_number = []
-            for index in kumiawase:
-                l_str_number.append(l_str_n[index])
-
-            if int("".join(l_str_number)) % 3 == 0:
-                return k - num_pickup
-
-        num_pickup -= 1
-    
-    return -1
+    if cur == 0:
+        return 0
+    elif cur == 1:
+        if cnt[1] > 0:
+            if k == 1:
+                return -1
+            else:
+                return 1
+        else:
+            if k == 2:
+                return -1
+            else:
+                return 2
+    else:
+        if cnt[2] > 0:
+            if k == 1:
+                return -1
+            else:
+                return 1
+        else:
+            if k == 2:
+                return -1
+            else:
+                return 2
 
 
 if __name__ == "__main__":
