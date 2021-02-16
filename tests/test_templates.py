@@ -4,6 +4,7 @@ from unittest import TestCase
 import utils as ut
 from templates.search import *
 from templates.dec_to_bin import *
+from templates.combination import *
 
 
 class TestBinarySearch(TestCase):
@@ -99,3 +100,21 @@ class TestDecToBin(TestCase):
 
 
         self.assertEqual([0, 0, 1, 1], dec_to_bin(3, 4))
+
+
+class TestCombination(TestCase):
+
+    def test_11_1(self):
+        n = 11
+        m = 1
+        self.assertEqual(11, combination(n, m))
+
+    def test_11_11(self):
+        n = 11
+        m = 11
+        self.assertEqual(1, combination(n, m))
+
+    def test_199_11(self):
+        n = 199
+        m = 11
+        self.assertEqual(366461620334848584, combination(n, m))
