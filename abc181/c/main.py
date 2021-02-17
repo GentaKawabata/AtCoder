@@ -4,16 +4,6 @@
 from typing import List
 
 import itertools
-import math
-
-
-def len_btw_points(p1, p2):
-    return math.sqrt(pow(p1[0] - p2[0], 2) + pow(p1[1] - p2[1], 2))
-
-
-# def area_tri(len_edge1, len_edge2, len_edge3):
-#     d = (len_edge1 + len_edge2 + len_edge3) / 2.0
-#     return math.sqrt(d * (d - len_edge1) * (d- len_edge2) * (d - len_edge3))
 
 
 def get_answer(n: int, l_xy: List[List[int]]):
@@ -22,27 +12,20 @@ def get_answer(n: int, l_xy: List[List[int]]):
     all_comb = list(itertools.combinations(l_index, 3))
 
     for comb in all_comb:
-        len_edge1 = len_btw_points(l_xy[comb[0]], l_xy[comb[1]])
-        len_edge2 = len_btw_points(l_xy[comb[0]], l_xy[comb[2]])
-        len_edge3 = len_btw_points(l_xy[comb[1]], l_xy[comb[2]])
+        x0 = l_xy[comb[0]][0]
+        y0 = l_xy[comb[0]][1]
+        x1 = l_xy[comb[1]][0]
+        y1 = l_xy[comb[1]][1]
+        x2 = l_xy[comb[2]][0]
+        y2 = l_xy[comb[2]][1]
 
-        if len_edge1 >= len_edge2 + len_edge3:
-            return "Yes"
-        if len_edge2 >= len_edge1 + len_edge3:
-            return "Yes"
-        if len_edge3 >= len_edge1 + len_edge2:
+        if (y1 - y0) * (x2 - x0) == (y2 - y0) * (x1 - x0):
             return "Yes"
 
     return "No"
 
 
 if __name__ == "__main__":
-    # S = input()
-    # N = int(input())
-    # S = input().split()
-    # A, B, C = input().split()
-    # L = list(map(int, input().split()))
-    # H, N = map(int, input().split())
 
     N = int(input())
     L_XY = []
