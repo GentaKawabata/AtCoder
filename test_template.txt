@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from unittest import TestCase
+import random as rd
 
 # import tests.utils as utils
 # import utils
