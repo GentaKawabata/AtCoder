@@ -1,6 +1,17 @@
-# -*- coding: utf-8 -*-
 
 from typing import List
+
+def get_cumulative_sum_sequential(numbers: List[int]):
+    """forで累積和を求める。
+    This method works.
+    """
+    result: List[int] = [0]
+
+    for number in numbers:
+        sum = result[-1] + number
+        result.append(sum)
+    return result
+
 
 MOD = int(1e9 + 7)
 
@@ -24,23 +35,3 @@ def get_sum(l_c, start, stop):
     """
     return l_c[stop] - l_c[start]
 
-def get_answer(n, l_a):
-
-    l_c = get_cumulative_sum_sequential_mod(l_a)
-    result = 0
-    for i in range(n - 1):
-        a = l_a[i]
-        b = get_sum(l_c, i + 1, n)
-        if b < 0:
-            b += MOD
-        result += a * b
-        result %= MOD
-
-    return result
-
-
-if __name__ == "__main__":
-    N = int(input())
-    L_A = list(map(int, input().split()))
-
-    print(get_answer(N, L_A))

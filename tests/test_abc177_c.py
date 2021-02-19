@@ -16,7 +16,7 @@ class Test_abc177_c(TestCase):
 
     def test_get_answer_2(self):
         N = int(2 * 1e5)
-        L_A = [rd.randrange(0, int(1e9), 1) for _ in range(N)]
+        L_A = [rd.randrange(int(1e8), int(1e9), 1) for _ in range(N)]
         ans = get_answer(N, L_A)
         self.assertTrue(True)
 
