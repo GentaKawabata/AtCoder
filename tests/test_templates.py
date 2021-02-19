@@ -5,6 +5,7 @@ import utils as ut
 from templates.search import *
 from templates.dec_to_bin import *
 from templates.combination import *
+from templates.cumulative_sum import *
 
 
 class TestBinarySearch(TestCase):
@@ -118,3 +119,25 @@ class TestCombination(TestCase):
         n = 199
         m = 11
         self.assertEqual(366461620334848584, combination(n, m))
+
+
+class TestCumulativeSum(TestCase):
+
+    def test_get_cm_list_3(self):
+        L_A = [1, 2, 3]
+        cs_list = CumulativeSumList(L_A)
+        self.assertEqual([0, 1, 3, 6], cs_list.cum_sum_list)
+
+    def test_get_cm_list_5(self):
+        L_A = [-1, -3, 1, -2, 3]
+        cs_list = CumulativeSumList(L_A)
+        self.assertEqual([0, -1, -4, -3, -5, -2], cs_list.cum_sum_list)
+
+    def test_get_sum_3(self):
+        L_A = [1, 2, 3]
+        cs_list = CumulativeSumList(L_A)
+
+        start = 0
+        stop = 2
+        self.assertEqual(3, cs_list.get_sum(start, stop))
+
