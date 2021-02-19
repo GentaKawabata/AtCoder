@@ -123,14 +123,21 @@ class TestCombination(TestCase):
 
 class TestCumulativeSum(TestCase):
 
-    def test_get_cum_list_3(self):
+    def test_get_cm_list_3(self):
         L_A = [1, 2, 3]
-        self.assertEqual([0, 1, 3, 6], get_cumulative_sum_sequential(L_A))
+        cs_list = CumulativeSumList(L_A)
+        self.assertEqual([0, 1, 3, 6], cs_list.cum_sum_list)
+
+    def test_get_cm_list_5(self):
+        L_A = [-1, -3, 1, -2, 3]
+        cs_list = CumulativeSumList(L_A)
+        self.assertEqual([0, -1, -4, -3, -5, -2], cs_list.cum_sum_list)
 
     def test_get_sum_3(self):
         L_A = [1, 2, 3]
-        L_C = get_cumulative_sum_sequential(L_A)
+        cs_list = CumulativeSumList(L_A)
+
         start = 0
         stop = 2
-        self.assertEqual(3, get_sum(L_C, start, stop))
+        self.assertEqual(3, cs_list.get_sum(start, stop))
 
