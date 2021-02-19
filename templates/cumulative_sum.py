@@ -1,4 +1,3 @@
-
 class CumulativeSumList(object):
 
     def __init__(self, list_no, use_mod=False) -> None:
