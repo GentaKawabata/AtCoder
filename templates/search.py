@@ -17,8 +17,8 @@ def binary_ordinary(key: Any, sorted_arr: List[Any]) -> int:
     key となる値が配列内に重複している場合は...
     """
 
-    left: int = 0
-    right: int = len(sorted_arr) -1
+    left: int = 0                       # index = 0 が条件を満たす（0以上が右側）こともあるので、初期値は -1
+    right: int = len(sorted_arr) -1     # index = len - 1 が条件を満たさない（len-1以下が左側）こともあるので、初期値は len
 
     while (left <= right):
         mid: int = int(left + (right - left) / 2)
