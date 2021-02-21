@@ -7,6 +7,40 @@ from templates.combination import *
 from templates.cumulative_sum import *
 from templates.dec_to_bin import *
 from templates.search import *
+from templates.mod import *
+
+
+class TestMod(TestCase):
+
+    def test_mod_inv_1(self):
+        a = 1
+        mod = 13
+        expect = 1
+        self.assertEqual(expect, mod_inv(a, mod))
+
+    def test_mod_inv_2(self):
+        a = 2
+        mod = 13
+        expect = 7
+        self.assertEqual(expect, mod_inv(a, mod))
+
+    def test_mod_inv_3(self):
+        a = 3
+        mod = 13
+        expect = 9
+        self.assertEqual(expect, mod_inv(a, mod))
+
+    def test_mod_inv_4(self):
+        a = 4
+        mod = 13
+        expect = 10
+        self.assertEqual(expect, mod_inv(a, mod))
+
+    def test_mod_inv_5(self):
+        a = 5
+        mod = 13
+        expect = 8
+        self.assertEqual(expect, mod_inv(a, mod))
 
 
 class TestBinarySearch(TestCase):
