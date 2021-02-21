@@ -23,7 +23,7 @@ def mod_inv(a: int, mod: int):
 
 
 """
-累乗 a^n を二分累乗法で求める。
+累乗 a^n mod を二分累乗法で求める。
 O(log n)
 """
 
