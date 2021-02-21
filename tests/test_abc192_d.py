@@ -39,3 +39,8 @@ class Test_abc192_d(TestCase):
         X = "1"
         M = int(1e18)
         self.assertEqual(1, get_answer(X, M))
+
+    def test_get_answer_x_1_m_10(self):
+        X = "1"
+        M = 10
+        self.assertEqual(1, get_answer(X, M))

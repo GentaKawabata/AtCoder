@@ -1,30 +1,33 @@
 # -*- coding: utf-8 -*-
 
 
-def base_n_to_10(x: str, n: int):
+def base_n_to_10(str_base_no: str, n: int):
     result = 0
-    num = len(str(x)) + 1
-    for i in range(1, num):
-        result += int(x[-i]) * (n**(i-1))
+    for i, c in enumerate(str_base_no[::-1]):
+        result += int(c) * (n**i)
     return result
 
 
 def get_answer(x: str, m: int):
-    list_str_no = list(x)
-
-    list_no = list(map(lambda x: int(x), list_str_no))
-    d = max(list_no)
-
-    result = 0
-    n = d + 1
-    while True:
-        number_x = base_n_to_10(x, n)
-        if number_x <= m:
-            result += 1
+    # 例外処理 1桁の場合
+    if len(x) == 1:
+        if int(x) <= m:
+            return 1
         else:
-            break
-        n += 1
-    return result
+            return 0
+    else:
+        d = int(max(list(x)))
+
+        head = d
+        tail = int(1e18) + 1
+        while tail - head > 1:
+            mid = (tail + head) // 2
+            decimal = base_n_to_10(x, mid)
+            if decimal <= m:
+                head = mid
+            else:
+                tail = mid
+        return head - d
 
 
 if __name__ == "__main__":
