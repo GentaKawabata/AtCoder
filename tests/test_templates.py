@@ -42,6 +42,24 @@ class TestMod(TestCase):
         expect = 8
         self.assertEqual(expect, mod_inv(a, mod))
 
+    def test_mod_pow_2_3(self):
+        a, n = 2, 3
+        mod = int(1e9) + 7
+        expect = 8
+        self.assertEqual(expect, mod_pow(a, n, mod))
+
+    def test_mod_pow_3_5(self):
+        a, n = 3, 5
+        mod = int(1e9) + 7
+        expect = 243
+        self.assertEqual(expect, mod_pow(a, n, mod))
+
+    def test_mod_pow_3_45(self):
+        a, n = 3, 45
+        mod = int(1e9) + 7
+        expect = 2954312706550833698643 % mod
+        self.assertEqual(expect, mod_pow(a, n, mod))
+
 
 class TestBinarySearch(TestCase):
 
