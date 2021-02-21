@@ -1,4 +1,5 @@
 import random
+from templates.prime_number import is_prime_number
 from unittest import TestCase
 
 import utils as ut
@@ -8,6 +9,20 @@ from templates.cumulative_sum import *
 from templates.dec_to_bin import *
 from templates.search import *
 from templates.mod import *
+
+
+class TestPrimeNumber(TestCase):
+
+    def test_prime_number(self):
+        l_prime_no = []
+        for i in range(2, 100, 1):
+            if is_prime_number(i):
+                l_prime_no.append(i)
+        
+        self.assertEqual(
+            [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97],
+            l_prime_no
+        )
 
 
 class TestMod(TestCase):
