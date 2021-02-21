@@ -14,37 +14,19 @@ import {contest_id}.e.main as e
 import {contest_id}.f.main as f
 
 
+class Test_{contest_id}_b(TestCase):
+
+    def test_get_answer_1(self):
+        pass
+
+
 class Test_{contest_id}_c(TestCase):
 
     def test_get_answer_1(self):
-        self.fail()
+        pass
 
 
 class Test_{contest_id}_d(TestCase):
 
     def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_{contest_id}_e(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_{contest_id}_f(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_{contest_id}_a(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_{contest_id}_b(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
+        pass

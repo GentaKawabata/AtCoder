@@ -42,33 +42,3 @@ class Test_abc182_c(TestCase):
         # 途中でreturnがあるから、そこをコメントアウトして速度計測すること
         ans = c.get_answer(N)
         self.assertTrue(True)
-
-
-class Test_abc182_d(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_abc182_e(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_abc182_f(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_abc182_a(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_abc182_b(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()

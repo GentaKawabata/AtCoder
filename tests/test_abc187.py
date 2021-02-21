@@ -68,33 +68,3 @@ class Test_abc187_c(TestCase):
         S = set(S)
 
         self.assertEqual("satisfiable", c.get_answer_set(N, S))
-
-
-class Test_abc187_d(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_abc187_e(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_abc187_f(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_abc187_a(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_abc187_b(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()

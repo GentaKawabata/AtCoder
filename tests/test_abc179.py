@@ -51,33 +51,3 @@ class TestAbc179C_Example(TestCase):
     def test_get_answer_example_1000000(self):
         N = 1000000
         self.assertEqual(13969985, c.get_answer_example(N))
-
-
-class Test_abc179_d(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_abc179_e(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_abc179_f(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_abc179_a(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_abc179_b(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()

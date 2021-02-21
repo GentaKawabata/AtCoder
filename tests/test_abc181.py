@@ -24,33 +24,3 @@ class Test_abc181_c(TestCase):
         print(c.get_answer(N, L_XY))
 
         self.assertTrue(True)
-
-
-class Test_abc181_d(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_abc181_e(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_abc181_f(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_abc181_a(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_abc181_b(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()

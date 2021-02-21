@@ -31,33 +31,3 @@ class Test_abc177_c(TestCase):
         N = 3
         L_A = [1, 2, 3]
         self.assertEqual(11, c.get_answer(N, L_A))
-
-
-class Test_abc177_d(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_abc177_e(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_abc177_f(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_abc177_a(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_abc177_b(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()

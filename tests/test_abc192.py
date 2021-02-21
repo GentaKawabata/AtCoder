@@ -74,27 +74,3 @@ class Test_abc192_d(TestCase):
         X = "1"
         M = 10
         self.assertEqual(1, d.get_answer(X, M))
-
-
-class Test_abc192_e(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_abc192_f(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_abc192_a(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_abc192_b(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()

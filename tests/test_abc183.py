@@ -45,33 +45,3 @@ class Test_abc183_c(TestCase):
         T = [[pow(10, 8) for _ in range(N)] for _ in range(N)]
 
         self.assertTrue(True)
-
-
-class Test_abc183_d(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_abc183_e(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_abc183_f(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_abc183_a(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_abc183_b(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()

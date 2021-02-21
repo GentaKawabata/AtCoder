@@ -107,30 +107,6 @@ class Test_abc191_c(TestCase):
         self.assertEqual(18, c.get_answer(H, W, S))
 
 
-class Test_abc191_d(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_abc191_e(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_abc191_f(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_abc191_a(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
 class Test_abc191_b(TestCase):
 
     def test_get_answer_1(self):

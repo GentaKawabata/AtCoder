@@ -31,33 +31,3 @@ class Test_abc185_c(TestCase):
     def test_get_answer_20(self):
         L = 20
         self.assertEqual(75582, c.get_answer(L))
-
-
-class Test_abc185_d(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_abc185_e(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_abc185_f(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_abc185_a(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_abc185_b(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()

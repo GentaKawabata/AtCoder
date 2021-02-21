@@ -43,33 +43,3 @@ class Test_abc188_c(TestCase):
         L_A = [rd.randrange(1, pow(10, 9)) for _ in range(pow(2, N))]
         ans = c.get_answer(N, L_A)
         self.assertTrue(True)
-
-
-class Test_abc188_d(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_abc188_e(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_abc188_f(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_abc188_a(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
-
-
-class Test_abc188_b(TestCase):
-
-    def test_get_answer_1(self):
-        self.fail()
