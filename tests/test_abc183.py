@@ -1,10 +1,18 @@
 # -*- coding: utf-8 -*-
 
 from unittest import TestCase
+import random as rd
 
 # import tests.utils as utils
 # import utils
-from abc183.c.main import *
+
+import abc183.a.main as a
+import abc183.b.main as b
+import abc183.c.main as c
+import abc183.d.main as d
+import abc183.e.main as e
+import abc183.f.main as f
+
 
 class Test_abc183_c(TestCase):
 
@@ -17,7 +25,7 @@ class Test_abc183_c(TestCase):
             [10, 20, 0, 300],
             [100, 200, 300, 0]
         ]
-        self.assertEqual(2, get_answer(N, K, T))
+        self.assertEqual(2, c.get_answer(N, K, T))
 
     def test_get_answer_2(self):
         N = 5
@@ -29,7 +37,7 @@ class Test_abc183_c(TestCase):
             [1, 1, 1, 0, 1],
             [1, 1, 1, 1, 0]
         ]
-        self.assertEqual(24, get_answer(N, K, T))
+        self.assertEqual(24, c.get_answer(N, K, T))
 
     def test_get_answer_3(self):
         N = 8
@@ -37,3 +45,33 @@ class Test_abc183_c(TestCase):
         T = [[pow(10, 8) for _ in range(N)] for _ in range(N)]
 
         self.assertTrue(True)
+
+
+class Test_abc183_d(TestCase):
+
+    def test_get_answer_1(self):
+        self.fail()
+
+
+class Test_abc183_e(TestCase):
+
+    def test_get_answer_1(self):
+        self.fail()
+
+
+class Test_abc183_f(TestCase):
+
+    def test_get_answer_1(self):
+        self.fail()
+
+
+class Test_abc183_a(TestCase):
+
+    def test_get_answer_1(self):
+        self.fail()
+
+
+class Test_abc183_b(TestCase):
+
+    def test_get_answer_1(self):
+        self.fail()

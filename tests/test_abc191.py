@@ -1,10 +1,17 @@
 # -*- coding: utf-8 -*-
 
 from unittest import TestCase
+import random as rd
 
 # import tests.utils as utils
 # import utils
-from abc191.c.main import *
+
+import abc191.a.main as a
+import abc191.b.main as b
+import abc191.c.main as c
+import abc191.d.main as d
+import abc191.e.main as e
+import abc191.f.main as f
 
 
 class Test_abc191_c(TestCase):
@@ -24,7 +31,7 @@ class Test_abc191_c(TestCase):
             "....."
         ]
 
-        self.assertEqual(4, get_answer(H, W, S))
+        self.assertEqual(4, c.get_answer(H, W, S))
 
     def test_get_answer_2(self):
         H = 5
@@ -37,7 +44,7 @@ class Test_abc191_c(TestCase):
             "....."
         ]
 
-        self.assertEqual(8, get_answer(H, W, S))
+        self.assertEqual(8, c.get_answer(H, W, S))
 
     def test_get_answer_3(self):
         H = 5
@@ -50,7 +57,7 @@ class Test_abc191_c(TestCase):
             "......."
         ]
 
-        self.assertEqual(8, get_answer(H, W, S))
+        self.assertEqual(8, c.get_answer(H, W, S))
 
     def test_get_answer_4(self):
         H = 9
@@ -67,7 +74,7 @@ class Test_abc191_c(TestCase):
             "............."
         ]
 
-        self.assertEqual(26, get_answer(H, W, S))
+        self.assertEqual(26, c.get_answer(H, W, S))
 
     def test_get_answer_5(self):
         H = 3
@@ -78,7 +85,7 @@ class Test_abc191_c(TestCase):
             "..."
         ]
 
-        self.assertEqual(4, get_answer(H, W, S))
+        self.assertEqual(4, c.get_answer(H, W, S))
 
 
     def test_get_answer_6(self):
@@ -97,4 +104,38 @@ class Test_abc191_c(TestCase):
             ".........."
         ]
 
-        self.assertEqual(18, get_answer(H, W, S))
+        self.assertEqual(18, c.get_answer(H, W, S))
+
+
+class Test_abc191_d(TestCase):
+
+    def test_get_answer_1(self):
+        self.fail()
+
+
+class Test_abc191_e(TestCase):
+
+    def test_get_answer_1(self):
+        self.fail()
+
+
+class Test_abc191_f(TestCase):
+
+    def test_get_answer_1(self):
+        self.fail()
+
+
+class Test_abc191_a(TestCase):
+
+    def test_get_answer_1(self):
+        self.fail()
+
+
+class Test_abc191_b(TestCase):
+
+    def test_get_answer_1(self):
+        N = 5
+        X = 5
+        A = [3, 5, 6, 5, 4]
+
+        self.assertEqual("3 6 4", b.get_answer(N, X, A))

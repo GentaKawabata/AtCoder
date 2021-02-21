@@ -5,7 +5,14 @@ import random as rd
 
 # import tests.utils as utils
 # import utils
-from abc187.c.main import *
+
+import abc187.a.main as a
+import abc187.b.main as b
+import abc187.c.main as c
+import abc187.d.main as d
+import abc187.e.main as e
+import abc187.f.main as f
+
 
 class Test_abc187_c(TestCase):
 
@@ -23,7 +30,7 @@ class Test_abc187_c(TestCase):
             "brown",
             "!gray"
         ]
-        self.assertEqual("satisfiable", get_answer_list(N, L_S))
+        self.assertEqual("satisfiable", c.get_answer_list(N, L_S))
 
     def test_get_answer_2(self):
         N = 11
@@ -40,7 +47,7 @@ class Test_abc187_c(TestCase):
             "!gray",
             "!red"
         ]
-        self.assertEqual("red", get_answer_list(N, L_S))
+        self.assertEqual("red", c.get_answer_list(N, L_S))
 
     def test_get_answer_term_list(self):
 
@@ -49,7 +56,7 @@ class Test_abc187_c(TestCase):
         for _ in range(N):
             S.append("aaaaaaaaa")
         
-        self.assertEqual("satisfiable", get_answer_list(N, S))
+        self.assertEqual("satisfiable", c.get_answer_list(N, S))
 
     def test_get_answer_term_set(self):
 
@@ -60,4 +67,34 @@ class Test_abc187_c(TestCase):
         
         S = set(S)
 
-        self.assertEqual("satisfiable", get_answer_set(N, S))
+        self.assertEqual("satisfiable", c.get_answer_set(N, S))
+
+
+class Test_abc187_d(TestCase):
+
+    def test_get_answer_1(self):
+        self.fail()
+
+
+class Test_abc187_e(TestCase):
+
+    def test_get_answer_1(self):
+        self.fail()
+
+
+class Test_abc187_f(TestCase):
+
+    def test_get_answer_1(self):
+        self.fail()
+
+
+class Test_abc187_a(TestCase):
+
+    def test_get_answer_1(self):
+        self.fail()
+
+
+class Test_abc187_b(TestCase):
+
+    def test_get_answer_1(self):
+        self.fail()
