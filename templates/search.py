@@ -51,7 +51,7 @@ def binary_meguru(key: Any, sorted_arr: List[Any]) -> int:
     while right - left > 1:
         mid: int = int(left + (right - left) / 2)
 
-        if sorted_arr[mid] <= key:
+        if sorted_arr[mid] < key:
             left = mid
         else:
             right = mid
