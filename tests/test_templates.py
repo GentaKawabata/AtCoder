@@ -2,10 +2,11 @@ import random
 from unittest import TestCase
 
 import utils as ut
-from templates.search import *
-from templates.dec_to_bin import *
+from templates.base_number import *
 from templates.combination import *
 from templates.cumulative_sum import *
+from templates.dec_to_bin import *
+from templates.search import *
 
 
 class TestBinarySearch(TestCase):
@@ -141,3 +142,15 @@ class TestCumulativeSum(TestCase):
         stop = 2
         self.assertEqual(3, get_sum_from_cum_sum_list(cs_list, start, stop))
 
+
+class TestBaseNumber(TestCase):
+
+    def test_base_2_to_10_22(self):
+        base_number = "11"
+        n = 2
+        self.assertEqual(3, base_n_to_10(base_number, n))
+
+    def test_base_3_to_10_22(self):
+        base_number = "22"
+        n = 3
+        self.assertEqual(8, base_n_to_10(base_number, n))
