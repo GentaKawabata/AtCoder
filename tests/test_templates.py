@@ -80,27 +80,27 @@ class TestBinarySearch(TestCase):
 
     def test_int_no_dupl(self):
         arr = [2, 5, 8, 9, 10]
-        self.assertEqual(2, binary(8, arr))
+        self.assertEqual(2, binary_meguru(8, arr))
 
     def test_int_with_dupl(self):
         arr = [2, 5, 8, 8, 9, 10]
-        self.assertEqual(2, binary(8, arr))
+        self.assertEqual(2, binary_meguru(8, arr))
 
     def test_str_no_dupl(self):
         arr = ["a", "k", "l", "p", "r", "w"]
-        self.assertEqual(2, binary("l", arr))
+        self.assertEqual(2, binary_meguru("l", arr))
 
     def test_str_with_dupl(self):
         arr = ["a", "k", "l", "p", "r", "r", "w"]
-        self.assertEqual(4, binary("r", arr))
+        self.assertEqual(4, binary_meguru("r", arr))
 
     def test_str_not_include(self):
         arr = ["a", "k", "l", "p", "r", "r", "w"]
-        self.assertEqual(-1, binary("o", arr))
+        self.assertEqual(-1, binary_meguru("o", arr))
     
     def test_int_any(self):
         arr = [0, 0, 4, 5, 5, 7, 7, 7, 9, 9]
-        self.assertEqual(0, binary(0, arr))
+        self.assertEqual(0, binary_meguru(0, arr))
 
     def test_int_random(self):
         num_test = 10
@@ -110,7 +110,7 @@ class TestBinarySearch(TestCase):
 
         timer = ut.MyTimer()
         for i in range(num_test):
-            print(f"### test {i}/{num_test} ###")
+            # print(f"### test {i}/{num_test} ###")
             key = random.randrange(rand_range[0], rand_range[1], 1)
 
             # timer.start()
@@ -133,26 +133,26 @@ class TestBinarySearch(TestCase):
                 timer.start()
                 py_index = arr.index(key)
                 time = timer.stop()
-            print(f"time py index = {time}")
+            # print(f"time py index = {time}")
 
             # 逐次探索
             timer.start()
             seq_actual = sequential(key, arr)
-            print(f"time seq = {timer.stop()}")
-            print(f"(py_index, seq) = ({py_index}, {seq_actual})")
+            # print(f"time seq = {timer.stop()}")
+            # print(f"(py_index, seq) = ({py_index}, {seq_actual})")
             with self.subTest(name=f"test seq {i}/{num_test}", key=key, arr=arr):
                 self.assertEqual(py_index, seq_actual)
 
             # 二分探索
             timer.start()
-            bin_actual = binary(key, arr)
-            print(f"time bin = {timer.stop()}")
-            print(f"(py_index, act) = ({py_index}, {bin_actual})")
+            bin_actual = binary_meguru(key, arr)
+            # print(f"time bin = {timer.stop()}")
+            # print(f"(py_index, act) = ({py_index}, {bin_actual})")
             with self.subTest(name=f"test bin {i}/{num_test}", key=key, arr=arr):
                 self.assertEqual(py_index, seq_actual)
                 self.assertEqual(py_index, bin_actual)
 
-            print("")
+            # print("")
 
 
 class TestDecToBin(TestCase):

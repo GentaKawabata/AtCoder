@@ -18,16 +18,16 @@ def get_answer(x: str, m: int):
     else:
         d = int(max(list(x)))
 
-        head = d
-        tail = int(1e18) + 1
-        while tail - head > 1:
-            mid = (tail + head) // 2
+        left = d
+        right = int(1e18) + 1
+        while right - left > 1:
+            mid = (right + left) // 2
             decimal = base_n_to_10(x, mid)
             if decimal <= m:
-                head = mid
+                left = mid
             else:
-                tail = mid
-        return head - d
+                right = mid
+        return right - (d + 1)
 
 
 if __name__ == "__main__":
