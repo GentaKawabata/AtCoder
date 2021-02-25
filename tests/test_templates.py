@@ -6,7 +6,6 @@ import utils as ut
 from templates.base_number import *
 from templates.combination import *
 from templates.cumulative_sum import *
-from templates.dec_to_bin import *
 from templates.search import *
 from templates.mod import *
 
@@ -155,22 +154,6 @@ class TestBinarySearch(TestCase):
             # print("")
 
 
-class TestDecToBin(TestCase):
-
-    def test_3_3(self):
-        # dec_to_bin(3, 3) -> [0, 1, 1]
-        self.assertEqual([0, 1, 1], dec_to_bin(3, 3))
-
-    def test_3_4(self):
-        # dec_to_bin(3, 4) -> [0, 0, 1, 1]
-
-        dec_no = 3
-        a = dec_to_bin(dec_no, 4)
-
-
-        self.assertEqual([0, 0, 1, 1], dec_to_bin(3, 4))
-
-
 class TestCombination(TestCase):
 
     def test_11_1(self):
@@ -213,11 +196,13 @@ class TestCumulativeSum(TestCase):
 class TestBaseNumber(TestCase):
 
     def test_base_2_to_10_22(self):
-        base_number = "11"
-        n = 2
-        self.assertEqual(3, base_n_to_10(base_number, n))
+        self.assertEqual(3, base_n_to_dec("11", 2))
 
     def test_base_3_to_10_22(self):
-        base_number = "22"
-        n = 3
-        self.assertEqual(8, base_n_to_10(base_number, n))
+        self.assertEqual(8, base_n_to_dec("22", 3))
+
+    def test_dec_to_bin_3_3(self):
+        self.assertEqual([0, 1, 1], dec_to_bin(3, 3))
+
+    def test_dec_to_bin_3_4(self):
+        self.assertEqual([0, 0, 1, 1], dec_to_bin(3, 4))
