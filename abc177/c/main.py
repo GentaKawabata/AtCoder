@@ -3,12 +3,15 @@
 
 MOD = int(1e9) + 7
 
-N = int(input())
-A = list(map(int, input().split()))
+def get_answer(n, l_a):
+    S_A = sum(l_a)
+    S2 = sum(map(lambda x: x * x, l_a))
+    ans = ((S_A * S_A - S2) // 2) % MOD
+    return ans
 
 
-S_A = sum(A)
-S2 = sum(map(lambda x: x * x, A))
-ans = ((S_A * S_A - S2) // 2) % MOD
+if __name__ == "__main__":
+    N = int(input())
+    A = list(map(int, input().split()))
 
-print(ans)
+    print(get_answer(N, A))
